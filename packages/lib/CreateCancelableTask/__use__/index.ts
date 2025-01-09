@@ -1,8 +1,8 @@
 import { createCancelableTask } from '../index.js'
 
-const fetchData = (url: string): Promise<string> => {
-  return new Promise((resolve) => setTimeout(() => resolve('data from ' + url), 1000))
-};
+function fetchData(url: string): Promise<string> {
+  return new Promise(resolve => setTimeout(() => resolve(`data from ${url}`), 1000))
+}
 
 const { execute, cancel } = createCancelableTask(fetchData)
 

@@ -1,21 +1,50 @@
 {
   "name": "good-fn",
-  "version": "1.0.0",
-  "description": "收集有关 JS / TS 一切优秀的代码片段或者优秀 Vue 组件片段。",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
+  "version": "0.0.1",
+  "description": "收集有关 JS / TS / CSS 一切优秀的代码片段或者优秀 Vue 组件片段。",
+  "private": true,
   "type": "module",
-  "keywords": [
-    "ts",
-    "js",
-    "vue"
-  ],
   "author": "Bin",
-  "license": "MIT",
+  "scripts": {
+    "dev": "vite",
+    "build": "run-p type-check \"build-only {@}\" --",
+    "preview": "vite preview",
+    "test:unit": "vitest",
+    "build-only": "vite build",
+    "type-check": "vue-tsc --build",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "prepare": "simple-git-hooks"
+  },
+  "simple-git-hooks": {
+    "pre-commit": "npx lint-staged"
+  },
+  "lint-staged": {
+    "*.{js,ts,tsx,vue,md}": [
+      "eslint --cache --fix"
+    ]
+  },
+  "dependencies": {
+    "vue": "^3.5.13",
+    "vue-router": "^4.5.0"
+  },
   "devDependencies": {
-    "@types/node": "^22.10.5",
-    "typescript": "^5.7.2"
+    "@antfu/eslint-config": "^3.12.2",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/jsdom": "^21.1.7",
+    "@types/node": "^22.10.2",
+    "@vitejs/plugin-vue": "^5.2.1",
+    "@vue/test-utils": "^2.4.6",
+    "@vue/tsconfig": "^0.7.0",
+    "eslint": "^9.17.0",
+    "jsdom": "^25.0.1",
+    "npm-run-all2": "^7.0.2",
+    "simple-git-hooks": "^2.11.1",
+    "typescript": "~5.6.3",
+    "unocss": "^0.65.4",
+    "vite": "^6.0.5",
+    "vite-plugin-vue-devtools": "^7.6.8",
+    "vitest": "^2.1.8",
+    "vue-tsc": "^2.1.10"
   }
 }

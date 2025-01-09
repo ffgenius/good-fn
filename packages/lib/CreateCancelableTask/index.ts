@@ -4,17 +4,15 @@
  * @description: 重复可取消的异步任务
  */
 
-export const createCancelableTask = <P extends any[], R extends Promise<any>>(
-  fn: (...args: P) => R,
-) => {
-  let _cancel: Function
+export function createCancelableTask<P extends any[], R extends Promise<any>>(fn: (...args: P) => R) {
+  let _cancel: () => void
   const NOOP = () => {}
   return {
     cancel: () => _cancel(),
     execute: (...args: P) => {
       return new Promise<R>((resolve, reject) => {
         _cancel?.()
-        _cancel = (e?: unknown) => {
+        _cancel = () => {
           resolve = NOOP
           reject = NOOP
         }
