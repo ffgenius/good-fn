@@ -1,4 +1,4 @@
-import { createCancelableTask } from '../index.js'
+import { createCancelableTask } from '..'
 
 function fetchData(url: string): Promise<string> {
   return new Promise(resolve => setTimeout(() => resolve(`data from ${url}`), 1000))

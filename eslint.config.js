@@ -16,6 +16,7 @@ export default antfu(
       'ts/no-unused-vars': 'off',
       'ts/no-redeclare': 'off',
       'unused-imports/no-unused-vars': 'off',
+      'style/max-statements-per-line': 'off',
     },
   },
 )
