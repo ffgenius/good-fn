@@ -1,12 +1,17 @@
 <script setup lang="ts">
-
+import RadiantText from '@/components/ui/radiantText/RadiantText.vue'
 </script>
 
 <template>
   <div class="h-[calc(100vh-64px)]">
     <div class="h-full flex items-center justify-between">
       <div>
-        <h1>👋 Hi，欢迎来到 <i class="hyperlink">GOOD-FN</i></h1>
+        <RadiantText
+          class="inline-flex items-center justify-center px-4 py-1 transition ease-out hover:text-neutral-600 hover:duration-300 hover:dark:text-neutral-400"
+          :duration="5"
+        >
+          <span class="text-3xl font-bold">👋 Hi，欢迎来到 <i class="hyperlink">GOOD-FN</i></span>
+        </RadiantText>
         <h3>
           我们收集了
           <i class="hyperlink">JS</i> &nbsp;
@@ -25,12 +30,6 @@
           </i>
         </h2>
       </div>
-      <ol-pixel-image
-        src="./public/logo.png"
-        width="40%"
-        height="auto"
-        :pixel-size="2"
-      />
     </div>
   </div>
 </template>
