@@ -4,6 +4,7 @@
  * @description: 纯CSS,简易的骨架屏实现
  * @usage: 在需要骨架屏的元素上添加loading="true"属性即可，如 vue 可以使用 v-bind:loading="isLoading"
  */
+
 *[loading='true'] > div:not([loading='true']) {
   background-image: linear-gradient(90deg, #f0f2f5 25%, #e6e8eb 37%, #f0f2f5 63%) !important;
   background-size: 400% 100% !important;
