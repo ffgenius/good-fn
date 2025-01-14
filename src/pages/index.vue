@@ -28,7 +28,7 @@ import ConfettiButton from '@/components/ui/confettiButton/ConfettiButton.vue'
         </h5>
         <h2 class="mt20">
           <i class="hyperlink">
-            OK, LET WE GO <i class="i-carbon-grid" />
+            OK, LET US GO
           </i>
         </h2>
       </BlurReveal>

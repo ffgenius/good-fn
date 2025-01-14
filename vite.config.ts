@@ -2,15 +2,16 @@ import { fileURLToPath, URL } from 'node:url'
 
 import vue from '@vitejs/plugin-vue'
 import UnoCSS from 'unocss/vite'
+import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import vueDevTools from 'vite-plugin-vue-devtools'
 
-// https://vite.dev/config/
 export default defineConfig({
   plugins: [
     vue(),
     UnoCSS(),
     vueDevTools(),
+    VueRouter(),
   ],
   resolve: {
     alias: {
