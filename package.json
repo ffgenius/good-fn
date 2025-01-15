@@ -32,6 +32,7 @@
     "canvas-confetti": "^1.9.3",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
+    "github-markdown-css": "^5.8.1",
     "radix-vue": "^1.9.12",
     "tailwind-merge": "^2.6.0",
     "vue": "^3.5.13",
@@ -58,6 +59,7 @@
     "unocss-preset-shadcn": "^0.3.1",
     "unplugin-vue-router": "^0.10.9",
     "vite": "^6.0.5",
+    "vite-plugin-md": "^0.21.5",
     "vite-plugin-vue-devtools": "^7.6.8",
     "vitest": "^2.1.8",
     "vue-tsc": "^2.1.10"

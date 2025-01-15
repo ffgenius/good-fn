@@ -3,7 +3,7 @@ import { createApp } from 'vue'
 
 import App from './App.vue'
 import router from './router'
-import './assets/main.css'
+import './assets/style/main.css'
 import '@unocss/reset/tailwind.css'
 import 'virtual:uno.css'
 
