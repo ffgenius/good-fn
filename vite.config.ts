@@ -1,5 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
 import vue from '@vitejs/plugin-vue'
+import code from '@yankeeinlondon/code-builder'
+import link from '@yankeeinlondon/link-builder'
+import meta from '@yankeeinlondon/meta-builder'
+import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
@@ -16,7 +20,14 @@ export default defineConfig({
     VueRouter({
       extensions: ['.vue', '.md'],
     }),
-    Markdown(),
+    Markdown({
+      builders: [code({
+        theme: 'solarizedLight',
+      }), link(), meta()],
+      markdownItSetup(md) {
+        md.use(MarkdownItGitHubAlerts)
+      },
+    }),
   ],
   resolve: {
     alias: {
