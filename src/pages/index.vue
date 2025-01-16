@@ -1,6 +1,8 @@
 <script setup lang="ts">
 import BlurReveal from '@/components/ui/blurReveal/BlurReveal.vue'
 import ConfettiButton from '@/components/ui/confettiButton/ConfettiButton.vue'
+import ParticlesBg from '@/components/ui/particlesBg/ParticlesBg.vue'
+import { isDark } from '@/layout/theme.ts'
 </script>
 
 <template>
@@ -33,6 +35,14 @@ import ConfettiButton from '@/components/ui/confettiButton/ConfettiButton.vue'
         </h2>
       </BlurReveal>
     </div>
+    <ParticlesBg
+      class="absolute inset-0 z--1"
+      :quantity="100"
+      :ease="100"
+      :color="isDark ? '#FFF' : '#000'"
+      :staticity="10"
+      refresh
+    />
   </div>
 </template>
 
