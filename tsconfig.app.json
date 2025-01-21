@@ -7,7 +7,8 @@
     "src/**/*",
     "src/**/*.vue",
     "packages/**/*.ts",
-    "./typed-router.d.ts"
+    "./typed-router.d.ts",
+    "./components.d.ts"
   ],
   "exclude": [
     "src/**/__tests__/*",

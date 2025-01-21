@@ -11,6 +11,8 @@ node_modules
 .DS_Store
 dist
 dist-ssr
+components.d.ts
+.eslintcache
 coverage
 *.local
 

@@ -1,8 +1,8 @@
 <script setup lang="ts">
-import BlurReveal from '@/components/ui/blurReveal/BlurReveal.vue'
-import ConfettiButton from '@/components/ui/confettiButton/ConfettiButton.vue'
-import ParticlesBg from '@/components/ui/particlesBg/ParticlesBg.vue'
 import { isDark } from '@/layout/theme.ts'
+import { useRouter } from 'vue-router'
+
+const router = useRouter()
 </script>
 
 <template>
@@ -29,7 +29,7 @@ import { isDark } from '@/layout/theme.ts'
           本项目并不提供第三方包方式使用，你可以 copy 适合你的代码片段
         </h5>
         <h2 class="mt20">
-          <i class="hyperlink">
+          <i class="hyperlink" @click="router.push('catalog')">
             OK, LET US GO
           </i>
         </h2>

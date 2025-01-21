@@ -5,6 +5,7 @@ import link from '@yankeeinlondon/link-builder'
 import meta from '@yankeeinlondon/meta-builder'
 import MarkdownItGitHubAlerts from 'markdown-it-github-alerts'
 import UnoCSS from 'unocss/vite'
+import Components from 'unplugin-vue-components/vite'
 import VueRouter from 'unplugin-vue-router/vite'
 import { defineConfig } from 'vite'
 import Markdown from 'vite-plugin-md'
@@ -19,6 +20,12 @@ export default defineConfig({
     vueDevTools(),
     VueRouter({
       extensions: ['.vue', '.md'],
+    }),
+    Components({
+      extensions: ['vue', 'md'],
+
+      include: [/\.vue$/, /\.vue\?vue/, /\.md$/],
+      dts: './components.d.ts',
     }),
     Markdown({
       builders: [code({
