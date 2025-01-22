@@ -40,6 +40,8 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url)),
       '@lib': fileURLToPath(new URL('./packages/lib', import.meta.url)),
+      '@css': fileURLToPath(new URL('./packages/css', import.meta.url)),
+      '@hooks': fileURLToPath(new URL('./packages/hooks', import.meta.url)),
     },
   },
 })

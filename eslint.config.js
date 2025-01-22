@@ -1,9 +1,11 @@
 import antfu from '@antfu/eslint-config'
 
 export default antfu(
-  {},
   {
-    files: ['packages/**/__use__/*.ts'],
+    ignores: ['src/pages/core/*.md'],
+  },
+  {
+    files: ['packages/**/__use__/*.ts', 'src/components/core/*.vue'],
     rules: {
       'no-alert': 'off',
       'no-console': 'off',

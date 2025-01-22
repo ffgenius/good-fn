@@ -32,12 +32,12 @@ export default [
       },
       {
         name: 'CreateAsyncQueue',
-        comment: '创建一个重复可取消的异步任务',
+        comment: '异步函数顺序执行',
         url: '/core/createAsyncQueue',
       },
       {
         name: 'CreateCancelableTask',
-        comment: '创建一个重复可取消的异步任务',
+        comment: '重复可取消的异步任务',
         url: '/core/createCancelableTask',
       },
     ],

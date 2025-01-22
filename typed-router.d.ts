@@ -23,7 +23,11 @@ declare module 'vue-router/auto-routes' {
     '/catalog': RouteRecordInfo<'/catalog', '/catalog', Record<never, never>, Record<never, never>>,
     '/core': RouteRecordInfo<'/core', '/core', Record<never, never>, Record<never, never>>,
     '/core/': RouteRecordInfo<'/core/', '/core', Record<never, never>, Record<never, never>>,
+    '/core/autoSkeletonScreen': RouteRecordInfo<'/core/autoSkeletonScreen', '/core/autoSkeletonScreen', Record<never, never>, Record<never, never>>,
+    '/core/autoUtils': RouteRecordInfo<'/core/autoUtils', '/core/autoUtils', Record<never, never>, Record<never, never>>,
     '/core/createAsyncQueue': RouteRecordInfo<'/core/createAsyncQueue', '/core/createAsyncQueue', Record<never, never>, Record<never, never>>,
+    '/core/createCancelableTask': RouteRecordInfo<'/core/createCancelableTask', '/core/createCancelableTask', Record<never, never>, Record<never, never>>,
+    '/core/useAutoRefresh': RouteRecordInfo<'/core/useAutoRefresh', '/core/useAutoRefresh', Record<never, never>, Record<never, never>>,
     '/test': RouteRecordInfo<'/test', '/test', Record<never, never>, Record<never, never>>,
   }
 }
